@@ -51,11 +51,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateY(-1%);
+    transform: translateY(-2%);
+    transition: all 0.4s;
 }
 
 .itemInputBox button:hover{
     background-color: #20c997;
+    transform: scale(110%);
 }
 
 
@@ -78,6 +80,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.4s;
 }
 
 .itemIcons:hover{

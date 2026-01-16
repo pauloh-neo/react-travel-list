@@ -2,7 +2,8 @@ import { useState } from 'react'
 import formStyle from './form.module.css'
 import {Minus, Plus} from 'lucide-react'
 
-export default function Form({itemsList, setItemsList}){
+
+export default function Form({itemsList, setItemsList, done}){
     const[quantity, setQuantity] = useState(0);
     const[item, setItems] = useState("")
     // const[itemsList, setItemsList] = useState([]); 
@@ -22,12 +23,16 @@ export default function Form({itemsList, setItemsList}){
 
         e.preventDefault()
         setItemsList(prev => [
-            ...prev, {name: item, quantity}
+            ...prev, {
+                id: crypto.randomUUID(),
+                name: item, quantity, done: false}
         ])
 
         setItems("")
         setQuantity(0)
     }
+
+    
 
     return(
         <form className={formStyle.form} onSubmit={handleCreate}>

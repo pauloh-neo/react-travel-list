@@ -7,12 +7,13 @@ function App() {
 
   const[itemsList, setItemsList] = useState([]); 
 
+
   return (
     <main>
       <Header/>
       <section>
         <Form itemsList={itemsList} setItemsList={setItemsList}/>
-        <List itemsList={itemsList}/>
+        <List itemsList={itemsList} setItemsList={setItemsList}/>
       </section>
     </main>
   )

@@ -1,21 +1,45 @@
 import listStyle from './list.module.css'
-import {Trash, Check} from 'lucide-react'
+import {Trash, Check, X} from 'lucide-react'
 
-export function List({itemsList}){
+export function List({itemsList, setItemsList}){
 
-    const arr = Array.from({ length: 5 }, (_, i) => i + 1)
-    // console.log(arr)
+
+    function handleDelete(id){
+        setItemsList((item) => item.filter((item) => item.id != id))
+    }
+
+    function handleDone(id){
+        setItemsList((prev) => prev.map((item) => item.id == id? {...item, done: !item.done}: item))
+    }
 
     return(
-        <ul className={listStyle}>
+        <ul className={listStyle.list}>
             {itemsList.map((item) => (
-                <span key={item.id}>
-                    <li>{item.name}</li>
-                    <div>
-                        <Check size={32}/>
-                        <Trash size={32}/>
+                <li className={listStyle.box} key={item.id} >
+                    <span className={`${listStyle.itemName} ${item.done ? listStyle.done : ''}`}>
+                        {item.name}
+                    </span>
+
+                    <div className={listStyle.icons}>
+                        <button
+                            type="button"
+                            onClick={() => handleDone(item.id)}
+                            >
+
+                            {item.done?
+                                <X size={32} /> : <Check size={32} /> 
+                            }
+                            
+                        </button>
+
+                        <button
+                            type="button"
+                            onClick={() => handleDelete(item.id)}
+                            >
+                            <Trash size={32} />
+                        </button>
                     </div>
-                </span>
+            </li>
             ))}
         </ul>
     )
