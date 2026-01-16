@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+main{
+    height: 100vh;
+    background-color: #e7f5ff;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+

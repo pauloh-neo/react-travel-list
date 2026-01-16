@@ -1,12 +1,16 @@
-
+import Header from "./components/Header"
+import Form from "./components/Form"
+import { List } from "./components/List"
 
 function App() {
-  
-
   return (
-    <>
-      <h1>Hello</h1>
-    </>
+    <main>
+      <Header/>
+      <section>
+        <Form/>
+        <List/>
+      </section>
+    </main>
   )
 }
 
