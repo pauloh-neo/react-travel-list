@@ -50,7 +50,10 @@ export default function Form({itemsList, setItemsList, done}){
                     value={item}
                     onChange={(e) => setItems(e.target.value)}
                     />
-                <button type='submit'>Create</button>
+                <button 
+                    type='submit'
+                    disabled={!item || quantity == 0}
+                    style={{ opacity: quantity === 0 ? 0.4 : 1 }}>Create</button>
             </div>
         </form>
     )
