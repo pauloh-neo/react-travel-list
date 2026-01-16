@@ -3,7 +3,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
+    gap: 2rem;
+    width: 100%;
     /* background-color: #96f2d7; */
     
 }
@@ -11,16 +12,17 @@
 
 .itemInputBox{
     display: flex;
-    max-height: 3.125rem;
+    
     justify-content: center;
     justify-items: center;
     position: relative;
+    gap: 1rem;
     
 }
 
 .itemInputBox input{
     width: 100%;
-    padding: 1.875rem;
+    padding: 1rem;
     font-size: 1.2rem;
     font-family: inherit;
     color: inherit;
@@ -48,10 +50,10 @@
     border-radius: 10px;
     background-color: #0ca678;
     color: #c3fae8;
-    position: absolute;
+    /* position: absolute;
     top: 0;
     right: 0;
-    transform: translateY(-2%);
+    transform: translateY(-2%); */
     transition: all 0.4s;
 }
 
@@ -91,4 +93,27 @@
     font-size: 2rem;
     align-self: center;
     color:#495057;
+}
+
+
+/* BELOW 1300PX*/
+
+@media (max-width: 81.25rem){
+    .form{
+        flex-direction: column;
+    }
+}
+
+/* BELOW 900PX*/
+
+@media (max-width: 56.25rem){
+    .itemInputBox{
+    display: flex;
+    flex-direction: column;
+    
+    }
+
+    .itemInputBox button{
+        width: 100%;
+    }
 }

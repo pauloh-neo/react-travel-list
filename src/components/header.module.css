@@ -4,3 +4,20 @@
     font-weight: 700;
     text-align: center;
 }
+
+
+/* BELOW 1200PX*/
+
+@media (max-width: 75rem){
+    .header{
+        font-size: 2.75rem;
+    }
+}
+
+/* BELOW 800PX*/
+
+@media (max-width: 50rem){
+    .header{
+        font-size: 32px;
+    }
+}

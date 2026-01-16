@@ -50,3 +50,12 @@
 .icons button:hover{
      outline: 1px solid #63e6be;
 }
+
+
+/* BELOW 900PX*/
+
+@media (max-width: 50rem){
+   .list{
+      margin-top: 2rem; 
+   }
+}

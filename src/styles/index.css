@@ -11,6 +11,7 @@ body{
 main{
     height: 100vh;
     background-color: #e7f5ff;
+    padding: 40px;
 }
 
 section{
@@ -18,7 +19,7 @@ section{
     grid-template-columns: 1fr;
     gap: 2rem;
     justify-items: center;
-    width: 50%;
+    max-width: 700px;
     margin: 0 auto;
     padding: 2rem;
 }

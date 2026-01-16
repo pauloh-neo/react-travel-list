@@ -1,0 +1,8 @@
+
+/* BELOW 900PX*/
+
+@media (max-width: 50rem){
+   section{
+    width: 100%;
+   }
+}
